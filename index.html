@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)https://cardadfar.github.io/stuco_webdev_website/assets/files/html_starter.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Give Me a Title!</title>                           <!-- Give Title -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./Give Me a Title!_files/style.css">  <!-- Insert StyleSheet -->
+    <link rel="icon" href="https://cardadfar.github.io/stuco_webdev_website/assets/files/cool-icon.png">                    <!-- Insert Icon -->
+    <script src="./Give Me a Title!_files/jquery.min.js"></script>
+</head>
+<body>
+
+    <p> Lets Build a Great Site! </p>
+
+    <script type="text/javascript" src="./Give Me a Title!_files/interactions.js"></script>    <!-- Insert JQuery Script -->
+
+
+
+<script>mendeleyWebImporter = {
+  downloadPdfs(e,t) { return this._call('downloadPdfs', [e,t]); },
+  open() { return this._call('open', []); },
+  setLoginToken(e) { return this._call('setLoginToken', [e]); },
+  _call(methodName, methodArgs) {
+    const id = Math.random();
+    window.postMessage({ id, token: '0.19134742040611274', methodName, methodArgs }, 'https://cardadfar.github.io');
+    return new Promise(resolve => {
+      const listener = window.addEventListener('message', event => {
+        const data = event.data;
+        if (typeof data !== 'object' || !('result' in data) || data.id !== id) return;
+        window.removeEventListener('message', listener);
+        resolve(data.result);
+      });
+    });
+  }
+};</script></body></html>
